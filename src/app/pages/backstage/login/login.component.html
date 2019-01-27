@@ -1,0 +1,22 @@
+<div class="bg">
+<div class="login-panel">
+  <div class="title">NG-BLOGCAS</div>
+  <form nz-form [formGroup]="validateForm" (ngSubmit)="onSubmit()">
+    <nz-form-item>
+      <nz-form-control>
+        <input nz-input name="username" type="text" placeholder="Username" formControlName="username">
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control>
+        <input nz-input name="password" type="password" placeholder="Password" formControlName="password">
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control>
+        <button nz-button class="login-form-button" [nzLoading]="isLoading" [nzType]="'primary'" type="submit" [disabled]="!validateForm.valid">Log in</button>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+</div>
+</div>

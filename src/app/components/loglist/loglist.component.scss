@@ -1,0 +1,19 @@
+@import '../../../assets/style/global.scss';
+
+.log-item {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+
+  .log-item-header {
+    line-height: 26px;
+    .log-title {
+      font-size: 26px;
+    }
+
+    .log-date {
+      float: right;
+      font-size: 14px;
+    }
+  }
+}

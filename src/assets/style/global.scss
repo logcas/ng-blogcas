@@ -1,0 +1,49 @@
+$border: #eee;
+$background: #fff;
+$primary: #1890ff;
+$fontColor: rgba(0, 0, 0, 0.65);
+
+.center-container {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+.container {
+  position: relative;
+  top: 69px;
+}
+
+.clearFix {
+  *zoom: 1;
+}
+
+.clearFix::after {
+  display: block;
+  content: " ";
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+/** 
+一些公共样式
+**/
+
+.page-title {
+  position: relative;
+  font-size: 28px;
+  font-weight: bold;
+  padding-left: 38px;
+  line-height: 46px;
+  user-select: none;
+
+  &::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 46px;
+    content: "#";
+    color: $primary;
+  }
+}

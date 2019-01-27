@@ -1,0 +1,45 @@
+@import '../../../assets/style/global.scss';
+
+.catagory {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 0.2em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #eee;
+
+  $fontColor: #5d686f;
+
+  .catagory-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: $fontColor;
+
+    a {
+      color: $fontColor;
+    }
+  }
+
+  li {
+    position: relative;
+    margin-left: 2em;
+    font-size: 16px;
+    padding: 0.2em;
+    line-height: 16px;
+
+    .title {
+      color: $fontColor;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .date {
+      margin-left: 1em;
+      color: lightgray;
+      font-size: 14px;
+    }
+  }
+}

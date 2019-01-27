@@ -1,0 +1,15 @@
+@import '../../../assets/style/global.scss';
+
+.container {
+  position: relative;
+  top: 69px;
+
+  .left {
+    float: left;
+    width: 240px;
+  }
+
+  .right {
+    margin-left: 260px;
+  }
+}
