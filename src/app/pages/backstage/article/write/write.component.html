@@ -1,0 +1,30 @@
+<div class="admin-page">
+  <p class="page-title">新写作</p>
+  <form nz-form [formGroup]="articleForm" (ngSubmit)="onSubmit()">
+    <nz-form-item>
+      <nz-form-control>
+        <nz-input-group nzCompact>
+          <nz-select formControlName="tag">
+            <nz-option *ngFor="let tag of tags" [nzLabel]="tag" [nzValue]="tag"></nz-option>
+          </nz-select>
+          <input type="text" nz-input style="width:50%;" placeholder="输入你的标题" formControlName="title">
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control>
+        <textarea nz-input placeholder="输入你的写作内容" [nzAutosize]="{ minRows: 20, maxRows: 40 }" formControlName="content"></textarea>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control>
+        <label nz-checkbox formControlName="isPrivate">这是私密文章，不对外公开？</label>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control>
+        <button nz-button nzType="primary" type="submit" [disabled]="!articleForm.valid" [nzLoading]="isLoading">发表文章</button>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+</div>

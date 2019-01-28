@@ -1,0 +1,42 @@
+<div class="backstage clearFix">
+  <div class="nav-sidebar">
+    <ul nz-menu [nzMode]="'inline'" nzTheme='dark' style="width: 240px;">
+      <li nz-submenu>
+        <span title><i nz-icon type="mail"></i>通用</span>
+        <ul>
+          <li nz-menu-item><a [routerLink]="[ '/admin' ]">首页/统计</a></li>
+        </ul>
+      </li>
+      <li nz-submenu>
+        <span title><i nz-icon type="mail"></i>写作</span>
+        <ul>
+          <li nz-menu-item><a [routerLink]="[ '/admin/article/write' ]">写文章</a></li>
+          <li nz-menu-item><a [routerLink]="[ '/admin/article' ]">管理文章</a></li>
+          <li nz-menu-item><a [routerLink]="[ '/admin/article/tags' ]">管理分类</a></li>
+        </ul>
+      </li>
+      <li nz-submenu>
+        <span title><i nz-icon type="appstore"></i>页面</span>
+        <ul>
+          <li nz-menu-item>编写关于页</li>
+          <li nz-menu-group>
+            <span title>管理</span>
+            <ul>
+              <li nz-menu-item>新建自定义页面</li>
+              <li nz-menu-item>管理自定义页面</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li nz-submenu>
+        <span title><i nz-icon type="setting"></i>导航</span>
+        <ul>
+          <li nz-menu-item>管理导航栏</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -5,6 +5,11 @@ import { LogsComponent } from './pages/logs/logs.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ArticleComponent } from './pages/article/article.component';
 import { LoginComponent } from './pages/backstage/login/login.component';
+import { IndexComponent as BackStageIndexComponent } from './pages/backstage/index/index.component';
+import { StatisticComponent } from './pages/backstage/statistic/statistic.component';
+import { ManageComponent } from './pages/backstage/article/manage/manage.component';
+import { WriteComponent } from './pages/backstage/article/write/write.component';
+import { TagsComponent } from './pages/backstage/article/tags/tags.component';
 
 const routes: Routes = [
   {
@@ -25,16 +30,28 @@ const routes: Routes = [
   },
   {
     path: 'admin',
+    component: BackStageIndexComponent,
     children: [
       {
         path: '',
-        redirectTo: 'admin/login',
-        pathMatch: 'full',
+        component: StatisticComponent,
       },
       {
         path: 'login',
         component: LoginComponent,
       },
+      {
+        path: 'article',
+        component: ManageComponent,
+      },
+      {
+        path: 'article/write',
+        component: WriteComponent,
+      },
+      {
+        path: 'article/tags',
+        component: TagsComponent,
+      }
     ]
   },
 ];

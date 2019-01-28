@@ -20,8 +20,15 @@ import { LogsComponent } from './pages/logs/logs.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ArticleComponent } from './pages/article/article.component';
 import { LoginComponent } from './pages/backstage/login/login.component';
+import { IndexComponent as BackstageIndexComponent } from './pages/backstage/index/index.component';
 
 import { BackstageService } from './services/backstage.service';
+import { StatisticComponent } from './pages/backstage/statistic/statistic.component';
+import { WriteComponent } from './pages/backstage/article/write/write.component';
+import { ManageComponent } from './pages/backstage/article/manage/manage.component';
+import { TagsComponent } from './pages/backstage/article/tags/tags.component';
+import { CreatepageComponent } from './pages/backstage/page/createpage/createpage.component';
+import { ManagepageComponent } from './pages/backstage/page/managepage/managepage.component';
 
 registerLocaleData(zh);
 
@@ -37,7 +44,14 @@ registerLocaleData(zh);
     LogsComponent,
     AboutComponent,
     ArticleComponent,
-    LoginComponent
+    LoginComponent,
+    BackstageIndexComponent,
+    StatisticComponent,
+    WriteComponent,
+    ManageComponent,
+    TagsComponent,
+    CreatepageComponent,
+    ManagepageComponent,
   ],
   imports: [
     BrowserModule,

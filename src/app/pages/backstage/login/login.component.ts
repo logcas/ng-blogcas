@@ -19,10 +19,6 @@ export class LoginComponent implements OnInit {
 
   isLoading = false;
 
-  // !逻辑上实际是没有问题的
-  // !关键是 rxjs 中 ERROR TypeError: Cannot read property 'isStopped' of undefined
-  // !what is 'isStopped' ?
-  // !占坑待解决
   onSubmit(): void {
     this.isLoading = true;
     const that = this;
